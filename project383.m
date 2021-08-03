@@ -37,8 +37,8 @@ while height>=0.02
         velocity_out = sqrt((2*gravity*height+2*gravity*tube_length/150)/(1+tube_length*friction_factor_lower/diameter+0.5));
         
         %Velocity out of the tube, with T-joint
-%         velocity_out = sqrt((2*gravity*height+2*gravity*tube_length/150)/(1+tube_length*friction_factor_lower/diameter+0.42*(1-diameter^2/(2*width*length/(width+length))^2)+(1-(diameter/t_joint_diameter))+(friction_factor_lower*t_joint_length)/t_joint_diameter));
-        
+%         velocity_out = sqrt((2*gravity*height+2*gravity*tube_length/150)/(1+tube_length*friction_factor_lower/diameter+0.5+(1-(diameter/t_joint_diameter))+(friction_factor_lower*t_joint_length)/t_joint_diameter));
+                
         Re = (rho*velocity_out*diameter)/viscosity;
         
         if Re > 2300
