@@ -24,6 +24,7 @@ velocity_plot = [];
 mass_flow_plot = [];
 Re_plot = [];
 ff_plot = [];
+height_plot = [];
 time_plot = [];
 
 while height>=0
@@ -67,6 +68,7 @@ while height>=0
     mass_flow_plot = [mass_flow_plot, mass_flow];
     Re_plot = [Re_plot, Re];
     ff_plot = [ff_plot, friction_factor_lower];
+    height_plot = [height_plot, height];
     time_plot = [time_plot, time];
     
 end
@@ -84,6 +86,12 @@ plot(time_plot, Re_plot);
 title("Re vs Time")
 xlabel("Time (s)")
 ylabel("Re")
+
+figure();
+plot(time_plot, height_plot);
+title("Height of Water vs Time")
+xlabel("Time (s)")
+ylabel("Height of Water (m)")
 
 figure();
 plot(ff_plot, velocity_plot);
