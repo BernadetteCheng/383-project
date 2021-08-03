@@ -5,10 +5,10 @@ gravity = 9.81;
 rho = 998;
 diameter = 7.94/1000;
 viscosity = 1.0016/1000;
-roughness = 0.0025/1000;
+roughness = 0.0015/1000;
 length = 32/100;
 width = 26/100;
-tube_length = 20/100;
+tube_length = 10/100;
 angle = 1/150;
 
 %initial conditions%
