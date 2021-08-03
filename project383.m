@@ -34,12 +34,15 @@ while height>=0
         friction_factor_upper = double(solve(colebrook_eqn, f));
     end
     volumetric_flow_rate = velocity_out*(pi*diameter^2)/4;
+    mass_flow = rho*(pi*(diameter/2)^2)*velocity_out;
     
     time = time+interval;
     height = height-((volumetric_flow_rate/(width*length))*interval);
     disp("volumentric_flow_rate: "+volumetric_flow_rate);
+    disp("mass_flow: "+mass_flow);
     disp("velocity_out: "+velocity_out);
     disp(height + " at time " + time);
+    
 end
 
 disp("time to drain: "+time);
