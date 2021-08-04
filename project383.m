@@ -86,6 +86,12 @@ xlabel("Time (s)")
 ylabel("Re")
 
 figure();
+plot(time_plot, mass_flow_plot);
+title("Mass Flow Rate vs Time")
+xlabel("Time (s)")
+ylabel("Mass Flow Rate (kg/s)")
+
+figure();
 plot(time_plot, height_plot);
 title("Height of Water vs Time")
 xlabel("Time (s)")
